@@ -18,6 +18,7 @@ public class Main {
         // - divisible by 400
 
         int year = date.getYear();
-        System.out.printf("b. Is leap year - %s\n", year % 4 == 0);
+        System.out.printf("b. Is leap year - %s\n",
+                year % 400 == 0 || (year % 100 != 0 && year % 4 == 0));
     }
 }
