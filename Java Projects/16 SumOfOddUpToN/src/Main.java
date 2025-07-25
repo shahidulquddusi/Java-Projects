@@ -7,17 +7,23 @@ public class Main {
         System.out.print("Please input n-th number: ");
         int nThNumber = input.nextInt();
 
-        double sumOfOdds = Math.pow( Math.ceilDiv( nThNumber , 2 ), 2);
+        // Grand Total: Raw formula
+        double sumOfOdd = Math.pow( Math.ceilDiv( nThNumber , 2 ), 2);
         System.out.printf("Sum of odd up to %d is: %1.0f\n",
-                nThNumber, sumOfOdds);
+                nThNumber, sumOfOdd);
+
+        // Grand Total: Arithmetic Progression (AP) formula:
+        double sumOfOddArSeq = (double) (1 + nThNumber)/2 * Math.ceilDiv(nThNumber,2);
+        System.out.printf("Using AP formula sum is: %1.0f\n",sumOfOddArSeq);
 
         System.out.println("\nIllustration is below:");
 
+        // Totals: Raw formula (illustration)
         int i = 1;
         while(i<=nThNumber){
-            double sumOfOddsLoop = Math.pow( Math.ceilDiv( i , 2 ), 2);
+            double sumOfOddLoop = Math.pow( Math.ceilDiv( i , 2 ), 2);
             System.out.printf("Sum of odd up to %d:   \t%1.0f\n",
-                    i, sumOfOddsLoop);
+                    i, sumOfOddLoop);
             i += 2;
         }
 
