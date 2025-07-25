@@ -4,7 +4,7 @@ public enum SchoolGrade {
     C(70, 80),
     D(60, 70),
     E(50, 60),
-    F(0,50);
+    F(0, 50);
 
     private final int minRange;
     private final int maxRange;

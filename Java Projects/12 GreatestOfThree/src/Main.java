@@ -8,7 +8,7 @@ public class Main {
         int secondNum = input.nextInt();
         int thirdNum = input.nextInt();
 
-//        if (firstNum>secondNum && firstNum>thirdNum) { //Same out
+//        if (firstNum>secondNum && firstNum>thirdNum) { //Same output
         if (firstNum>=secondNum && firstNum>=thirdNum) {
             System.out.printf("The greatest number is: %d\n",
                     firstNum);
@@ -17,13 +17,24 @@ public class Main {
                     Math.max(secondNum, thirdNum));
         }
 
-//      Note: below conditions are replaced with else condition above
-//        } else if (secondNum>thirdNum){
-//            System.out.printf("The greatest number is: %d\n",
-//                    secondNum);
-//        } else {
-//            System.out.printf("The greatest number is: %d\n",
-//                    thirdNum);
-//            }
+        /*
+        Output Sample:
+        Please enter 3 numbers.
+        2
+        3
+        1
+        The greatest number is: 3
+        */
+
+        /*
+        Note: below conditions are replaced with else condition above
+        } else if (secondNum>thirdNum){
+            System.out.printf("The greatest number is: %d\n",
+                    secondNum);
+        } else {
+            System.out.printf("The greatest number is: %d\n",
+                    thirdNum);
+        }
+        */
     }
 }

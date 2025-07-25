@@ -23,7 +23,37 @@ public class Main {
                 System.out.print(blank.repeat(5 - i));
                 System.out.println(str.repeat(i));
             }
+/*
+            Output:
 
+            Increasing:
+            *
+            **
+            ***
+            ****
+            *****
+
+            Decreasing:
+            *****
+            ****
+            ***
+            **
+            *
+
+            Decreasing reverse:
+            *****
+             ****
+              ***
+               **
+                *
+
+            Increasing reverse:
+                *
+               **
+              ***
+             ****
+            *****
+ */
         }
     }
 }

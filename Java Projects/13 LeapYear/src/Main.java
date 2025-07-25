@@ -20,5 +20,17 @@ public class Main {
         int year = date.getYear();
         System.out.printf("b. Is leap year - %s\n",
                 year % 400 == 0 || (year % 100 != 0 && year % 4 == 0));
+/*
+        Output Samples:
+        Enter date (e.g., YYYY-MM-DD): 2100-07-19
+            a. Is leap year - false
+            b. Is leap year - false
+        Enter date (e.g., YYYY-MM-DD): 2000-09-30
+            a. Is leap year - true
+            b. Is leap year - true
+        Enter date (e.g., YYYY-MM-DD): 2024-12-12
+            a. Is leap year - true
+            b. Is leap year - true
+*/
     }
 }

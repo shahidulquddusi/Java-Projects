@@ -17,5 +17,14 @@ public class Main {
                         Nishi got: %s
                         """,
                 dollyGrade, mollyGrade, pollyGrade, mishaGrade, bishopGrade, nishiGrade);
+/*
+        Output:
+        Dolly got: C
+        Molly got: D
+        Polly got: B
+        Misha got: E
+        Bishop got: B
+        Nishi got: B
+*/
     }
 }
