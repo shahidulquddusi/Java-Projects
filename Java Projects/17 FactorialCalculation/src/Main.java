@@ -1,30 +1,22 @@
-import java.util.Scanner;
-
 public class Main {
+
     public static void main(String[] args) {
 
-        Scanner input = new Scanner(System.in);
-        System.out.print("Please enter a number: ");
-        int n = input.nextInt();
+        // Press 'Run'
+        Calculate.factorial();
 
-        int factorial = 1;
-        int i = 1;
-        while (i<= n){
-                factorial *= i;
-                i++;
-            }
+        // This file contains 'DOCUMENTATION' for methods
+        // Hover your mouse over the method name to see details
 
-        System.out.printf("The factorial of %d is %d\n", n, factorial);
-
-        /*
-        Output sample:
-
-        Please enter a number: 5
+        /*     --Output sample--
+        Please enter the n-th number: l
+        Not an integer. Re-enter the n-th number: 1.2
+        Not an integer. Re-enter the n-th number: 5
         The factorial of 5 is 120
 
-        Please enter a number: 8
+        Please enter n-th number: 8
         The factorial of 8 is 40320
-
         */
+
     }
 }

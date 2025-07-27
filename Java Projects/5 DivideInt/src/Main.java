@@ -1,14 +1,20 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
+
     public static void main(String[] args) {
 
-        int firstInt = 6;
-        int secondInt = 5;
-        int divideResult = firstInt / secondInt;
-        float castedDivideResult = (float) firstInt / (float) secondInt;
-        System.out.println("The result of division of int is\t\t:" + divideResult);
-        System.out.println("The result of casted division of int is\t:" + castedDivideResult);
+        // Press 'Run'
+        Calculate.divideInt();
 
-        }
+        // This file contains 'DOCUMENTATION' for methods
+        // Hover your mouse over the method name to see details
+
+        /*          -- Output Sample --
+        Please enter the first number: 12.5
+        Not an integer.Re-enter the first number: 12
+        Please enter the second number: a
+        Not an integer.Re-enter the second number: 8
+        The result of division of int is			: 1
+        The result of division of int (cast to float) is: 1.50
+        */
     }
+}

@@ -1,18 +1,19 @@
-import java.util.Scanner;
-
 public class Main {
+
     public static void main(String[] args) {
 
-        int numOne = inputNumber();
-        int numTwo = inputNumber();
+        // Press 'Run'
+        Calculate.add();
 
-        int sumResult = numOne + numTwo;
-        System.out.println("The sum is: " + sumResult);
-    }
+        // This file contains 'DOCUMENTATION' for methods
+        // Hover your mouse over the method name to see details
 
-    public static int inputNumber(){
-            Scanner input = new Scanner(System.in);
-            System.out.print("Please enter a number: ");
-            return input.nextInt();
+        /*          -- Output Sample --
+        Please enter the first value: a
+        Not a number. Re-enter the first value: 450.7
+        Please enter the second value: n
+        Not a number. Re-enter the second value: 50
+        The sum is: 500.70
+        */
     }
 }

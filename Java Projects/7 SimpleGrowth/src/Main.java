@@ -1,28 +1,22 @@
-import java.util.Scanner;
-
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
+
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
 
-        float growthRate;
-        long principal;
-        float numOfYears;
+        // Press 'Run'
+        Finance.simpleGrowth();
 
-        System.out.print("Please enter the rate of growth: ");
-        growthRate = input.nextFloat();
+        // This file contains 'DOCUMENTATION' for methods
+        // Hover your mouse over the method name to see details
 
-        System.out.print("Please enter the principal amount: ");
-        principal = input.nextLong();
-
-        System.out.print("Please enter the number of years: ");
-        numOfYears = input.nextFloat();
-
-        double totalGrowth = principal * growthRate/100 * numOfYears;
-        double futureValue = principal * ( 1 + growthRate/100 * numOfYears) ;
-
-        System.out.printf("Total increased amount is: %.2f\n", totalGrowth );
-        System.out.printf("Total Future Value is: %.2f\n", futureValue );
+        /*          -- Output Sample --
+        Please enter the rate of growth (%): s
+        Not a number. Re-enter the rate of growth (%): 12.5
+        Please enter the principal amount: d
+        Not a number. Re-enter the principal amount: 1200.60
+        Please enter the number of years: 2.5
+        Total increased amount (simple growth) is: 375.19
+        Total Future Value (simple growth) is: 1575.79
+        */
     }
+
 }

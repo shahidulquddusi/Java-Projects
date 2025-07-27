@@ -1,18 +1,17 @@
-import java.util.Scanner;
-
 public class Main {
+
     public static void main(String[] args) {
 
-        Scanner input = new Scanner(System.in);
+        // Press 'Run'
+        Converter.fahrenheitToCelsius();
 
-        double fahrenheit;
-        double celsius;
+        // This file contains 'DOCUMENTATION' for methods
+        // Hover your mouse over the method name to see details
 
-        System.out.print("Please enter temperature in Fahrenheit: ");
-        fahrenheit = input.nextDouble();
-
-        celsius = (fahrenheit - 32) * 5f / 9f ;
-
-        System.out.printf("The converted celsius is %.2f: \n", celsius);
+        /*              -- Output Sample --
+        Please enter temperature in Fahrenheit: s
+        Not a number. Re-enter temperature in Fahrenheit: 104.3
+        The converted Celsius is: 40.17 degree.
+        */
     }
 }

@@ -1,40 +1,21 @@
-import java.util.Scanner;
-
 public class Main {
+
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.println("Please enter 3 numbers.");
-        int firstNum = input.nextInt();
-        int secondNum = input.nextInt();
-        int thirdNum = input.nextInt();
 
-//        if (firstNum>secondNum && firstNum>thirdNum) { //Same output
-        if (firstNum>=secondNum && firstNum>=thirdNum) {
-            System.out.printf("The greatest number is: %d\n",
-                    firstNum);
-        } else {
-            System.out.printf("The greatest number is: %d\n",
-                    Math.max(secondNum, thirdNum));
-        }
+        // Press 'Run'
+        Calculate.greatestOfThree();
 
-        /*
-        Output Sample:
+        // This file contains 'DOCUMENTATION' for methods
+        // Hover your mouse over the method name to see details
+
+        /*  -- Output Sample --
         Please enter 3 numbers.
-        2
-        3
-        1
-        The greatest number is: 3
-        */
-
-        /*
-        Note: below conditions are replaced with else condition above
-        } else if (secondNum>thirdNum){
-            System.out.printf("The greatest number is: %d\n",
-                    secondNum);
-        } else {
-            System.out.printf("The greatest number is: %d\n",
-                    thirdNum);
-        }
+        Please enter the first number: 4
+        Please enter the second number: a
+        Not a number. Re-enter the second number: 6
+        Please enter the third number: a
+        Not a number. Re-enter the third number: 1
+        The greatest number is: 6.00
         */
     }
 }

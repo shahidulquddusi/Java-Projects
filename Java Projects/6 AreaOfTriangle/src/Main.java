@@ -1,22 +1,19 @@
-import java.util.Scanner;
-
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
+
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
 
-        float height;
-        float base;
+        // Press 'Run'
+        Calculate.areaOfTriangle();
 
-        System.out.print("Please enter the height of the tringle: ");
-        height = input.nextInt();
+        // This file contains 'DOCUMENTATION' for methods
+        // Hover your mouse over the method name to see details
 
-        System.out.print("Please enter the base of the tringle: ");
-        base = input.nextInt();
-
-        float area = 0.5f * (height * base);
-
-        System.out.printf("Area of the triable is: %.1f\n", area );
-        }
+        /*      -- Output Sample --
+        Please enter the height value: a
+        Not a number. Re-enter the height value: 12.5
+        Please enter the perpendicular value: s
+        Not a number. Re-enter the perpendicular value: 6.73
+        Area of the triable is: 42.06
+        */
     }
+}

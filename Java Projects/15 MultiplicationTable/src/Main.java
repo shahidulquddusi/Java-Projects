@@ -1,30 +1,31 @@
-import java.util.Scanner;
-
 public class Main {
+
     public static void main(String[] args) {
 
-        Scanner input = new Scanner(System.in);
-        System.out.print("Please enter a number: ");
-        int number = input.nextInt();
+        // Press 'Run'
+        Calculate.multiplicationTable();
 
-        int i = 1;
-        while(i<11){
-            System.out.printf("%d * %d = %d\n", number, i, number*i);
-            i++;
-        }
-        /*
-        Output Sample:
-        Please enter a number: 7
-        7 * 1 = 7
-        7 * 2 = 14
-        7 * 3 = 21
-        7 * 4 = 28
-        7 * 5 = 35
-        7 * 6 = 42
-        7 * 7 = 49
-        7 * 8 = 56
-        7 * 9 = 63
-        7 * 10 = 70
+        // This file contains 'DOCUMENTATION' for methods
+        // Hover your mouse over the method name to see details
+
+        /*      -- Output Sample --
+        Please enter a number: a
+        Not a number. Re-enter a number: 7.12
+        Please enter the table limit number: l
+        Not an integer.Re-enter the table limit number: 1.2
+        Not an integer.Re-enter the table limit number: 12
+        7.12 * 1 = 7.12
+        7.12 * 2 = 14.24
+        7.12 * 3 = 21.36
+        7.12 * 4 = 28.48
+        7.12 * 5 = 35.60
+        7.12 * 6 = 42.72
+        7.12 * 7 = 49.84
+        7.12 * 8 = 56.96
+        7.12 * 9 = 64.08
+        7.12 * 10 = 71.20
+        7.12 * 11 = 78.32
+        7.12 * 12 = 85.44
         */
     }
 }

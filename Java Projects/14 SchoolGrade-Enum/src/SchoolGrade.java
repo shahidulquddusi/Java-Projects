@@ -1,4 +1,5 @@
 public enum SchoolGrade {
+
     A(90, 100),
     B(80, 90),
     C(70, 80),
@@ -18,6 +19,14 @@ public enum SchoolGrade {
         return score >= minRange && score <= maxRange;
     }
 
+    /**
+     * A simple method that calculates {@code grade} based on
+     * range of numbers and returns {@code String} values for grades.
+     * <br><br>
+     *
+     * @param studentScore
+     * @return <span style="color: #6198d4;">{@code String}</span>
+     */
     public static String getGrade(int studentScore) {
         String res;
         if (SchoolGrade.A.isInRange(studentScore)){

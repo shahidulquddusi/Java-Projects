@@ -1,9 +1,9 @@
 class SimpleGrowth {
-    float growthRate;
-    long principal;
-    float numOfYears;
+    double growthRate;
+    double principal;
+    double numOfYears;
 
-    public SimpleGrowth(float growthRate, long principal, float numOfYears) {
+    public SimpleGrowth(double growthRate, double principal, double numOfYears) {
         this.growthRate = growthRate;
         this.principal = principal;
         this.numOfYears = numOfYears;

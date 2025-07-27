@@ -1,26 +1,21 @@
-import java.util.Scanner;
-
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
+
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
 
-        int firstNumber;
-        int secondNumber;
-        int helperNumber;
-        System.out.print("Please enter the First Number: ");
-        firstNumber = input.nextInt();
+        // Press 'Run'
+        Calculate.swap();
 
-        System.out.print("Please enter the Second Number: ");
-        secondNumber = input.nextInt();
+        // This file contains 'DOCUMENTATION' for methods
+        // Hover your mouse over the method name to see details
 
-        //swap
-        helperNumber = firstNumber;
-        firstNumber = secondNumber;
-        secondNumber = helperNumber;
-
-        System.out.println("After swap:\nFirst Number is: " + firstNumber
-                +"\nSecond Number is: " + secondNumber);
+        /*          -- Output Sample --
+        Please enter the first value: s
+        Not a number. Re-enter the first value: 10.5
+        Please enter the second value: a
+        Not a number. Re-enter the second value: 55
+        After swap:
+        First Number is: 55.0
+        Second Number is: 10.5
+        */
     }
 }
