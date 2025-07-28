@@ -1,8 +1,6 @@
-import java.util.InputMismatchException;
-
 public class Calculate {
 
-    static int number = Input.inputNumber("a");
+    static int numberInput = Input.inputNumber("a");
 
     /**
      * A simple method that calculates {@code summation}
@@ -14,8 +12,21 @@ public class Calculate {
      * <br>
      * @return <span style="color: #6198d4;">{@code void}</span>
      */
-    static void sumOfDigitsLoop(){
-        System.out.println("Yet to work out.");
+    static void sumOfDigitsLoop() {
+
+        int number = numberInput;
+
+        int divResult;
+        int sumOfDigits = 0;
+
+        int divisor = (int) Math.pow(10, 9);    // max limit -int (power of 10)
+        while (divisor >= 1) {
+            divResult = number / divisor;
+            number -= (divResult * divisor);    // decrement of original number
+            sumOfDigits += divResult;   // stores divResults b4 next round (+increment)
+            divisor /= 10;              // decrement of counter (divisor)
+        }
+        System.out.printf("Sum of digits (loop) is: %d\n", sumOfDigits);
     }
 
     /**
@@ -28,6 +39,8 @@ public class Calculate {
      * @return <span style="color: #6198d4;">{@code void}</span>
      */
     static void sumOfDigitsRawFormula() {
+
+        int number = numberInput;
 
         /*
         try { // try-catch replaced with inputNumber()
@@ -105,16 +118,17 @@ public class Calculate {
                 - 100 * hundreds
                 - 10 * tens);
 
-        int x = Math.abs(bills + hundMills + tenMills + mills + hundThous +
+        int sumOfDigits = Math.abs(bills + hundMills + tenMills + mills + hundThous +
                 tenThous + thous + hundreds + tens + ones);
 
         if (number < 2147483647) {
-            System.out.printf("Sum of the digits is %d\n",
-                    x);
-        } else {
-            System.out.printf("Please enter a number below %d (2.147 Billion).\n",
-                    Integer.MAX_VALUE);
+            System.out.printf("Sum of digits (raw formula) is: %d\n",
+                    sumOfDigits);
         }
+//        else { // int - inputNumber() method handles this exception
+//            System.out.printf("Please enter a number below %d (2.147 Billion).\n",
+//                    Integer.MAX_VALUE);
+//        }
 
     }
 }

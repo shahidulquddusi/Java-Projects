@@ -5,7 +5,7 @@ public class Main {
         // Press 'Run'
         Calculate.lcm();
 
-        // This file contains documentation for methods
+        // This file contains 'DOCUMENTATION' for methods
         // Hover your mouse over the method name to see details
 
         /*          -- Output Sample --
