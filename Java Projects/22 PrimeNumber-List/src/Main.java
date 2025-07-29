@@ -9,14 +9,14 @@ public class Main {
         //Press 'Run'
         Calculate.isPrimeNumber();  // (void - a)
 
-        //--TODO-- could not output a 'prime number' successfully
+        //--TODO-- could not 'output' a 'prime number' successfully
         Calculate.notPrimeNumberOnly(); // (void - b - only 'non' prime) partially done
 
         Calculate.primeNumUpToN();      // (uses List<>)
         Calculate.notPrimeUpToNVoid();  // (void)
 
         /*      -- Output Sample --
-        Please enter a number: l
+        Please enter a number: a
         Not an integer. Re-enter a number: 10
         10 is not a prime number. (void - a)
         10 is not a prime number. (void - b - only 'non' prime)

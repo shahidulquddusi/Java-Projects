@@ -15,11 +15,17 @@ public class Calculate {
     static void sumOfDigitsLoop() {
 
         int number = numberInput;
+        int strLength = Integer.toString(number).length();
+
+        // divisorPower will be used as 'Power of 10' of divisor
+        // as 10^10 will give 2147483647 for int_limit
+        // int max limit (power of 10) is 9
+        int divisorPower = Math.min(strLength-1, 9);
 
         int divResult;
         int sumOfDigits = 0;
 
-        int divisor = (int) Math.pow(10, 9);    // int max limit (power of 10)
+        int divisor = (int) Math.pow(10, divisorPower);    // int max limit (power of 10)
         while (divisor >= 1) {              // counter
             divResult = number / divisor;
             number -= (divResult * divisor);    // decrement of original number
@@ -43,7 +49,7 @@ public class Calculate {
         int number = numberInput;
 
         /*
-        try { // try-catch replaced with inputNumber()
+        try { // try-catch is replaced with inputNumber()
             number = Input.inputNumber("a");
         } catch (InputMismatchException e) {
             System.out.println("Not integer or too big! Try again.");
