@@ -19,8 +19,8 @@ public class Calculate {
         int divResult;
         int sumOfDigits = 0;
 
-        int divisor = (int) Math.pow(10, 9);    // max limit -int (power of 10)
-        while (divisor >= 1) {
+        int divisor = (int) Math.pow(10, 9);    // int max limit (power of 10)
+        while (divisor >= 1) {              // counter
             divResult = number / divisor;
             number -= (divResult * divisor);    // decrement of original number
             sumOfDigits += divResult;   // stores divResults b4 next round (+increment)
