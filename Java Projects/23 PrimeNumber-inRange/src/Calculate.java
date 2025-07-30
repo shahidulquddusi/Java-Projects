@@ -26,8 +26,14 @@ public class Calculate {
 
         List<Integer> notPrimeList = new ArrayList<>();
 
-        for (int i = 2; i <= upperLimit; i = i + 1) {
+        // r can't be the lowerLimit
+        // being divisor, r determines the prime number
+        for (int i = lowerLimit; i <= upperLimit; i = i + 1) {
             for (int r = 2; r < i; r = r + 1) {
+                // in nested for :
+                // r < i; here 'i' is moving_lowerLimit
+                // moving lowerLimit, i, becomes prime or non-prime
+                // after repeated_division (loop division)
                 if (i % r == 0) {
                     notPrimeList.add(i);
                     break;
