@@ -4,6 +4,7 @@ public class Main {
 
         // Press 'Run'
         Calculate.factorial();
+        Calculate.factorialDecrementing();
 
         // This file contains 'DOCUMENTATION' for methods
         // Hover your mouse over the method name to see details

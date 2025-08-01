@@ -18,25 +18,54 @@ public class Calculate {
      */
     // 153 = 1^3 + 5^3 + 3^3
     // 1634 = 1^4 + 6^4 + 3^4 + 4^4
-    static void isArmstrongNumber() {
+    static void isArmstrong10PowN() {
 
         int number = numberInput;
         boolean isPositive = Calculate.isPositive;
 
         if (isPositive) {
-            if (number - sumOfPowerNOfDigits() == 0){
-                System.out.printf("Sum Of PowerN of Digits is %d; %d is an Armstrong number \n", sumOfPowerNOfDigits(), number);
+            if (number - sumOfOfDigits10PowN() == 0){
+                System.out.printf("Sum of powN of digits is %d; %d is an Armstrong number  - (10PowerN)\n", sumOfOfDigits10PowN(), number);
             } else {
-                System.out.printf("Sum Of PowerN of Digits is %d; %d is NOT an Armstrong number \n", sumOfPowerNOfDigits(), number);
+                System.out.printf("Sum of powN of digits is %d; %d is NOT an Armstrong number  - (10PowerN)\n", sumOfOfDigits10PowN(), number);
             }
         } else {
-            System.out.printf("Being negative, %d is NOT an Armstrong number \n", number);
+            System.out.printf("Being negative, %d is NOT an Armstrong number  - (10PowerN)\n", number);
+        }
+    }
+
+    /**
+     * A simple method that determines whether a {@code number} of {@code integer} type is
+     * <span style="color: #6198d4;">{@code Armstrong}</span> or not.
+     *
+     * <br><br> The method takes {@code user input} and
+     * validates the inputs with recursive request. It also
+     * uses <span style="color: #6198d4;">{@code loop}</span>
+     * for {@code iteration} issues.
+     * <br>
+     * @return <span style="color: #6198d4;">{@code void}</span>
+     */
+    // 153 = 1^3 + 5^3 + 3^3
+    // 1634 = 1^4 + 6^4 + 3^4 + 4^4
+    static void isArmstrongModulus10() {
+
+        int number = numberInput;
+        boolean isPositive = Calculate.isPositive;
+
+        if (isPositive) {
+            if (number - sumOfOfDigitsModulus10() == 0){
+                System.out.printf("Sum of powN of digits is %d; %d is an Armstrong number  - (Modulus10)\n", sumOfOfDigitsModulus10(), number);
+            } else {
+                System.out.printf("Sum of powN of digits is %d; %d is NOT an Armstrong number  - (Modulus10)\n", sumOfOfDigitsModulus10(), number);
+            }
+        } else {
+            System.out.printf("Being negative, %d is NOT an Armstrong number  - (Modulus10)\n", number);
         }
     }
 
 
     // derived from SumOfDigits
-    static int sumOfPowerNOfDigits(){
+    static int sumOfOfDigits10PowN(){
 
         int number = numberInput;
         int numberLength = Calculate.numberLength;
@@ -45,17 +74,31 @@ public class Calculate {
         int divisorPower = Math.min(numberLength-1, 9);
 
         int divResult;
-        int sumOfDigitsCube = 0;
+        int sumOfOfDigits = 0;
 
         int divisor = (int) Math.pow(10, divisorPower);
         while (divisor >= 1) {
             divResult = number / divisor;
             number -= (divResult * divisor);
-            sumOfDigitsCube += (int) Math.pow (divResult , numberLength );
+            sumOfOfDigits += (int) Math.pow (divResult , numberLength );
             divisor /= 10;
         }
-        return sumOfDigitsCube;
-        //        System.out.printf("Sum of digits (loop) is: %d\n", sumOfDigitsCube);
+        return sumOfOfDigits;
+    }
+
+    static int sumOfOfDigitsModulus10(){
+
+        int number = numberInput, digit = 0;
+        int numberLength = Calculate.numberLength;
+
+        int sumOfOfDigits = 0;
+
+        while (number >= 1) {
+            digit = number % 10;
+            sumOfOfDigits += (int) Math.pow (digit, numberLength );
+            number /= 10;
+        }
+        return sumOfOfDigits;
     }
 
     /**
@@ -70,24 +113,53 @@ public class Calculate {
      * @return <span style="color: #6198d4;">{@code void}</span>
      */
     // 121, 1331, 14641
-    static void isPalindromeNumber() {
+    static void isPalindrome10PowN() {
 
         int number = numberInput;
         boolean isPositive = Calculate.isPositive;
 
         if (isPositive) {
-            if (number - reverseDigitInt() == 0){
-                System.out.printf("Reversed as %d; %d is a Palindrome number \n", reverseDigitInt(), number);
+            if (number - reverseDigits10PowN() == 0){
+                System.out.printf("Reversed as %d; %d is a Palindrome number  - (10PowerN)\n", reverseDigits10PowN(), number);
             } else {
-                System.out.printf("Reversed as %d; %d is NOT a Palindrome number \n", reverseDigitInt(), number);
+                System.out.printf("Reversed as %d; %d is NOT a Palindrome number  - (10PowerN)\n", reverseDigits10PowN(), number);
             }
         } else {
-            System.out.printf("Being negative, %d is NOT a Palindrome number \n", number);
+            System.out.printf("Being negative, %d is NOT a Palindrome number  - (10PowerN)\n", number);
         }
 
     }
 
-    static int reverseDigitInt(){
+    /**
+     * A simple method that determines whether a {@code number} of {@code integer} type is
+     * <span style="color: #6198d4;">{@code Palindrome}</span> or not.
+     *
+     * <br><br> The method takes {@code user input} and
+     * validates the inputs with recursive request. It also
+     * uses <span style="color: #6198d4;">{@code loop}</span>
+     * for {@code iteration} issues.
+     * <br>
+     * @return <span style="color: #6198d4;">{@code void}</span>
+     */
+    // 121, 1331, 14641
+    static void isPalindromeModulus10() {
+
+        int number = numberInput;
+        boolean isPositive = Calculate.isPositive;
+
+        if (isPositive) {
+            if (number - reverseDigitsModulus10() == 0){
+                System.out.printf("Reversed as %d; %d is a Palindrome number  - (Modulus10)\n", reverseDigitsModulus10(), number);
+            } else {
+                System.out.printf("Reversed as %d; %d is NOT a Palindrome number  - (Modulus10)\n", reverseDigitsModulus10(), number);
+            }
+        } else {
+            System.out.printf("Being negative, %d is NOT a Palindrome number  - (Modulus10)\n", number);
+        }
+
+    }
+
+    static int reverseDigits10PowN(){
 
         int number = numberInput;
 
@@ -114,4 +186,19 @@ public class Calculate {
 
         return reversedNumber;
     }
+
+    static int reverseDigitsModulus10(){
+
+        int number = numberInput, digit;
+
+        int reversedNumber = 0;
+        while (number >= 1) {
+            digit = number % 10;
+            reversedNumber = reversedNumber * 10 + digit;
+            number /= 10;
+        }
+
+        return reversedNumber;
+    }
+
 }

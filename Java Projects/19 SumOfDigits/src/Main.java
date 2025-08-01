@@ -3,7 +3,10 @@ public class Main {
     public static void main(String[] args) {
 
         // Press 'Run'
-        Calculate.sumOfDigitsLoop();
+        Calculate.sumOfDigits10PowN();
+        System.out.printf("Sum of digits is: %d\t(int - 10PowerN)\n",
+                Calculate.sumOfDigits10PowNInt());
+        Calculate.sumOfDigitsModulus10();
         Calculate.sumOfDigitsRawFormula();
 
         // This file contains 'DOCUMENTATION' for methods

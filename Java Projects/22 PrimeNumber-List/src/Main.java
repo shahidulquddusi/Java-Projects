@@ -8,17 +8,20 @@ public class Main {
 
         //Press 'Run'
         Calculate.isPrimeNumber();  // (void - a)
+        System.out.printf("%s is prime: %b (boolean)\n",
+                Calculate.numberInput, Calculate.isPrimeBoolean());    // (boolean)
 
         //--TODO-- could not 'output' a 'prime number' successfully
-        Calculate.notPrimeNumberOnly(); // (void - b - only 'non' prime) partially done
+        Calculate.notPrimeNumberOnly();     // (void - b - only 'non' prime) partially done
 
-        Calculate.primeNumUpToN();      // (uses List<>)
-        Calculate.notPrimeUpToNVoid();  // (void)
+        Calculate.primeNumUpToN();          // (uses List<>)
+        Calculate.notPrimeUpToNVoid();      // (void)
 
         /*      -- Output Sample --
         Please enter a number: a
         Not an integer. Re-enter a number: 10
         10 is not a prime number. (void - a)
+        10 is prime: false (boolean)
         10 is not a prime number. (void - b - only 'non' prime)
         Prime numbers up to 10 are: (List<>)
         1, 2, 3, 5, 7, Prime numbers.

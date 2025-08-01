@@ -3,31 +3,29 @@ public class Main {
     public static void main(String[] args) {
 
         // Press 'Run'
-        System.out.printf("""
-                        Reverse digits are: %d   (int)\s
-                        "CAUTION: If unexpected negative, Check for Integer.Max_Value"
-                        """,
-                Calculate.reversedDigitsInt());
-        Calculate.reversedDigitsVoid();
-
-
+        System.out.printf("Reversed digits are: %d   (long - 10PowN)\n",
+                Calculate.reverseDigits10PowN());
+        System.out.printf("Reversed digits are: %d   (long - Modulus10)\n",
+                Calculate.reverseDigitsModulus10());
+        Calculate.reverseDigits10PowNVoid();
 
         // This file contains 'DOCUMENTATION' for methods
         // Hover your mouse over the method name to see details
 
         /*          -- Output Sample --
         Please enter a number: -123456
-        Reverse digits are: -654321   (void method)
-        Reverse digits are: -654321   (int)
+        Reversed digits are: -654321   (long - 10PowN)
+        Reversed digits are: -654321   (long - Modulus10)
+        Reversed digits are: -654321   (void method)
 
         Please enter a number: 1122334455
-        Reverse digits are: 5544332211   (void method)
-        Reverse digits are: -1603151438   (int)   """ due to Integer.Max_Value limit """
-        "CAUTION: If unexpected negative, Check for Integer.Max_Value"
+        Reversed digits are: 5544332211   (long - 10PowN)
+        Reversed digits are: 5544332211   (long - Modulus10)
+        Reversed digits are: 5544332211   (void method)
 
-        Please enter a number: 1122334421
-        Reverse digits are: 1244332211   (void method)
-        Reverse digits are: 1244332211   (int)
+        Reversed digits are: 1244332211   (long - 10PowN)
+        Reversed digits are: 1244332211   (long - Modulus10)
+        Reversed digits are: 1244332211   (void method)
         */
     }
 }

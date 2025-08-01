@@ -67,11 +67,37 @@ public class Calculate {
         int number = numberInput;
         for (int i = 2; i < number; i = i + 1) {
             if (number % i == 0) {
-                System.out.printf("%d is not a prime number. (void - b - only 'non' prime)\n", number);
+                System.out.printf("%d is not a prime number. (void - b - only 'non' prime)\n",
+                        number);
                 break;
             }
         }
     }
+
+    /**
+     * A simple method that determines whether a number is a
+     * <span style="color: #6198d4;">{@code prime number}</span>
+     * or not.
+     *
+     * <br><br> The method takes {@code user input} and
+     * validates the inputs with recursive request.
+     * <br>
+     * @return <span style="color: #6198d4;">{@code boolean}</span>
+     */
+    //Alternative isPrime
+    static boolean isPrimeBoolean(){
+        int number = numberInput;
+        int i = 2;
+        while (i < number) {
+            if (number % i == 0) {
+                return false;   // not prime
+            }
+            i++;
+        }
+        return true;    // prime
+    }
+
+    static boolean _isPrimeBoolean = isPrimeBoolean();
 
     /**
      * A <span style="color: #6198d4;">{@code helper}</span> method
@@ -143,7 +169,7 @@ public class Calculate {
 
         int number = numberInput;
         int r;
-        for (int i = 2; i < number; i = i + 1) {
+        for (int i = 2; i <= number; i = i + 1) {
                 for (r = 2; r < i; r = r + 1) {
                     if (i % r == 0) {
                         System.out.printf("%d, ", i);

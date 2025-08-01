@@ -12,7 +12,7 @@ public class Calculate {
      * <br>
      * @return <span style="color: #6198d4;">{@code void}</span>
      */
-    static void sumOfDigitsLoop() {
+    static void sumOfDigits10PowN() {
 
         int number = numberInput;
         int strLength = Integer.toString(number).length();
@@ -32,7 +32,61 @@ public class Calculate {
             sumOfDigits += divResult;   // stores divResults b4 next round (+increment)
             divisor /= 10;              // decrement of counter (divisor)
         }
-        System.out.printf("Sum of digits (loop) is: %d\n", sumOfDigits);
+        System.out.printf("Sum of digits is: %d\t(void - 10PowerN)\n", Math.abs(sumOfDigits));
+    }
+
+    /**
+     * A simple method that calculates {@code summation}
+     * of {@code digits} of a {@code number}
+     * using {@code loop}.
+     * <br><br> The method takes {@code user input}.
+     * It accepts number of {@code integer} type for calculation.
+     * It validates the input with recursive request.
+     * <br>
+     * @return <span style="color: #6198d4;">{@code int}</span>
+     */
+    static int sumOfDigits10PowNInt() {
+
+        int number = numberInput;
+        int strLength = Integer.toString(number).length();
+
+        int divisorPower = Math.min(strLength-1, 9);
+
+        int divResult;
+        int sumOfDigits = 0;
+
+        int divisor = (int) Math.pow(10, divisorPower);    // int max limit (power of 10)
+        while (divisor >= 1) {              // counter
+            divResult = number / divisor;
+            number -= (divResult * divisor);    // decrement of original number
+            sumOfDigits += divResult;   // stores divResults b4 next round (+increment)
+            divisor /= 10;              // decrement of counter (divisor)
+        }
+        return Math.abs(sumOfDigits);
+    }
+
+    /**
+     * A simple method that calculates {@code summation}
+     * of {@code digits} of a {@code number}
+     * using {@code loop}.
+     * <br><br> The method takes {@code user input}.
+     * It accepts number of {@code integer} type for calculation.
+     * It validates the input with recursive request.
+     * <br>
+     * @return <span style="color: #6198d4;">{@code void}</span>
+     */
+    static void sumOfDigitsModulus10() {
+
+        int number = numberInput;
+
+        int sumOfDigits = 0;
+
+        while (Math.abs(number) > 0) {              // counter
+            sumOfDigits += number % 10;
+            number /= 10;
+        }
+        System.out.printf("Sum of digits is: %d\t(void - Modulus10)\n",
+                Math.abs(sumOfDigits));
     }
 
     /**
@@ -128,7 +182,7 @@ public class Calculate {
                 tenThous + thous + hundreds + tens + ones);
 
         if (number < 2147483647) {
-            System.out.printf("Sum of digits (raw formula) is: %d\n",
+            System.out.printf("Sum of digits is: %d\t(void - raw formula)\n",
                     sumOfDigits);
         }
 //        else { // int - inputNumber() method handles this exception
